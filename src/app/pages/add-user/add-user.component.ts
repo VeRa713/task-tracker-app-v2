@@ -9,4 +9,8 @@ export class AddUserComponent {
   btnAddUser = () => {
     console.log("Adding user....");
   }
+
+  btnClear = () => {
+    console.log("Clearing add user form....");
+  }
 }
