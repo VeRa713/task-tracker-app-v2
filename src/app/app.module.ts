@@ -6,6 +6,7 @@ import { HeaderComponent } from './sections/header/header.component';
 import { FooterComponent } from './sections/footer/footer.component';
 import { ManagerLandingPageComponent } from './pages/manager-landing-page/manager-landing-page.component';
 import { UserLandingPageComponent } from './pages/user-landing-page/user-landing-page.component';
+import { AddUserComponent } from './pages/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { UserLandingPageComponent } from './pages/user-landing-page/user-landing
     HeaderComponent,
     FooterComponent,
     ManagerLandingPageComponent,
-    UserLandingPageComponent
+    UserLandingPageComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule
