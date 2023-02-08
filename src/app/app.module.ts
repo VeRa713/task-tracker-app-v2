@@ -9,10 +9,14 @@ import { AddUserComponent } from './pages/add-user/add-user.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { BackgroundComponent } from './sections/background/background.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
+import { AddTaskComponent } from './pages/add-task/add-task.component';
+import { UsersComponent } from './pages/users/users.component';
 
 const appRoutes: Routes = [
+  {path: 'add-task', component: AddTaskComponent},
   {path: 'view-tasks', component: TasksComponent},
-  {path: 'add-user', component: AddUserComponent}
+  {path: 'add-user', component: AddUserComponent},
+  {path: 'view-users', component: UsersComponent}
 ]
 
 @NgModule({
@@ -23,7 +27,9 @@ const appRoutes: Routes = [
     AddUserComponent,
     LandingPageComponent,
     BackgroundComponent,
-    TasksComponent
+    TasksComponent,
+    AddTaskComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
