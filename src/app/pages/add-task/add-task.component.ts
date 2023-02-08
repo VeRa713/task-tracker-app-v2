@@ -39,6 +39,12 @@ export class AddTaskComponent {
     this.taskService.saveTask(o).subscribe((savedTask) => {
       console.log(savedTask)
     })
+
+    this.taskItem.id = undefined;
+    this.taskItem.task_name = ''
+    this.taskItem.assigned_to = ''
+    this.taskItem.assigned_by = ''
+    this.taskItem.desc = ''
   }
 
   btnClear = () => {
