@@ -2,37 +2,10 @@
   "task_items": [
     {
       "id": 1,
-      "taskName": "Task4",
-      "assignedTo": "TM-613",
-      "assignedBy": "TL-007",
-      "desc": "Task 3 Description",
-      "priorityId": 1,
-      "statusId": 1
-    },
-    {
-      "id": 2,
-      "task_name": "a",
-      "assigned_to": "a",
-      "assigned_by": "a",
-      "desc": "a",
-      "status_id": 0,
-      "priority_id": 0
-    },
-    {
-      "id": 3,
-      "task_name": "hiii",
-      "assigned_to": "hiii",
-      "assigned_by": "hiii",
-      "desc": "hiii",
-      "status_id": 0,
-      "priority_id": 0
-    },
-    {
-      "id": 4,
-      "task_name": "we",
-      "assigned_to": "we",
-      "assigned_by": "we",
-      "desc": "we",
+      "task_name": "new Task",
+      "assigned_to": "TM-1204",
+      "assigned_by": "TL-0613",
+      "desc": "new task description",
       "status_id": 0,
       "priority_id": 0
     }
