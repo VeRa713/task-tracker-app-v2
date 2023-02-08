@@ -4,7 +4,7 @@
 
       <div class="card">
         <div class="card-header text-white">
-          <b>Register</b>
+          <b>Add User</b>
         </div>
 
         <div class="inputFields">
@@ -53,58 +53,10 @@
                       required />
               </div>
             </div>
-
-            <div class="form-group">
-              <div class="input-group">
-                  <div class="input-group-prepend"></div>
-                <input type="password"
-                      name="password"
-                      id="password"
-                      class="form-control"
-                      placeholder="Password"
-                      required />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="input-group">
-                <div class="input-group-prepend"></div>
-                <input type="password" name="passwordConfirmation"
-                      id="passwordConfirmation"
-                      class="form-control"
-                      placeholder="Confirm Password"
-                      autocapitalize="off"
-                      autocomplete="off"
-                      spellcheck="false"
-                      autocorrect="off"
-                      required />
-              </div>
-            </div>
           </div>
-
-          <div class="chooseRole">
-            <p class="text-black-50 mb-2">Choose your Role: </p>
-
-              <div class="form-group">
-                <input class="form-group-input" type="radio" name="flexRadioDefault" id="userRole" value="user" checked>
-                <label class="form-group-label" for="user">
-                  User
-                </label>
-              </div>
-
-              <div class="form-group">
-                <input class="form-group-input" type="radio" name="flexRadioDefault" id="leadRole" value="lead">
-                <label class="form-group-label" for="lead">
-                  Lead
-                </label>
-              </div>
-          </div>
-
-          <hr />
 
           <div>
-            <p> Already have an account? <a class="link-info" routerLink="/login"> Login</a> </p>
-            <button class="btn btn-primary">Sign Up</button>
+            <button class="btn btn-primary" (click)="btnAddUser()">Add User</button>
           </div>
 
           <br>
