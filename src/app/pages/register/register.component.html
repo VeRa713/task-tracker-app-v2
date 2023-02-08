@@ -1,0 +1,116 @@
+<section>
+  <div class="card-body p-5 text-center">
+    <div class="mb-md-5 mt-md-4 pb-5">
+
+      <div class="card">
+        <div class="card-header text-white">
+          <b>Register</b>
+        </div>
+
+        <div class="inputFields">
+          <div class="card-body">
+
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend"></div>
+                <input type="text" name="employeeNumber"
+                      id="employeeNumber"
+                      class="form-control"
+                      placeholder="Employee Number"
+                      required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend"></div>
+                <input type="text" name="firstName"
+                      id="firstName"
+                      class="form-control"
+                      placeholder="First Name"
+                      required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend"></div>
+                <input type="text" name="lastName"
+                      id="lastName"
+                      class="form-control"
+                      placeholder="Last Name"
+                      required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend"></div>
+                <input type="text" name="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="Email"
+                      required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                  <div class="input-group-prepend"></div>
+                <input type="password"
+                      name="password"
+                      id="password"
+                      class="form-control"
+                      placeholder="Password"
+                      required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend"></div>
+                <input type="password" name="passwordConfirmation"
+                      id="passwordConfirmation"
+                      class="form-control"
+                      placeholder="Confirm Password"
+                      autocapitalize="off"
+                      autocomplete="off"
+                      spellcheck="false"
+                      autocorrect="off"
+                      required />
+              </div>
+            </div>
+          </div>
+
+          <div class="chooseRole">
+            <p class="text-black-50 mb-2">Choose your Role: </p>
+
+              <div class="form-group">
+                <input class="form-group-input" type="radio" name="flexRadioDefault" id="userRole" value="user" checked>
+                <label class="form-group-label" for="user">
+                  User
+                </label>
+              </div>
+
+              <div class="form-group">
+                <input class="form-group-input" type="radio" name="flexRadioDefault" id="leadRole" value="lead">
+                <label class="form-group-label" for="lead">
+                  Lead
+                </label>
+              </div>
+          </div>
+
+          <hr />
+
+          <div>
+            <p> Already have an account? <a class="link-info" routerLink="/login"> Login</a> </p>
+            <button class="btn btn-primary">Sign Up</button>
+          </div>
+
+          <br>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

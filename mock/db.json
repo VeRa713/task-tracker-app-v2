@@ -1,0 +1,61 @@
+{
+  "task_items": [
+    {
+      "id": 1,
+      "taskName": "Task4",
+      "desc": "Task 3 Description",
+      "assignedTo": "TM-613",
+      "assignedBy": "TL-007",
+      "priorityId": 1,
+      "statusId": 1
+    }
+  ],
+  "priority": [
+    {
+      "id": 1,
+      "priorityName": "low"
+    },
+    {
+      "id": 2,
+      "priorityName": "medium"
+    },
+    {
+      "id": 3,
+      "priorityName": "high"
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "statusName": "to do"
+    },
+    {
+      "id": 2,
+      "statusName": "in progress"
+    },
+    {
+      "id": 3,
+      "statusName": "done"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "employeeNumber": "TL-007",
+      "firstName": "Ami",
+      "lastName": "Kim",
+      "email": "kim.ami@gmail.com",
+      "password": "password1234",
+      "isLead ": true
+    },
+    {
+      "id": 2,
+      "employeeNumber": "TM-613",
+      "firstName": "Yoonji",
+      "lastName": "Min",
+      "email": "min.yoonji@gmail.com",
+      "password": "password4321",
+      "isLead ": false
+    }
+  ]
+}
