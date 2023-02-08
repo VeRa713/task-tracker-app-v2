@@ -17,6 +17,15 @@
       "desc": "AHAHAHHAHAHHAHAHAHAHHA",
       "status_id": 0,
       "priority_id": 0
+    },
+    {
+      "task_name": "Test if clear function works",
+      "assigned_to": "Me",
+      "assigned_by": "Myself",
+      "desc": "hihi",
+      "status_id": 0,
+      "priority_id": 0,
+      "id": 3
     }
   ],
   "priority": [

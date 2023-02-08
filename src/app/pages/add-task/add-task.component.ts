@@ -40,16 +40,16 @@ export class AddTaskComponent {
       console.log(savedTask)
     })
 
-    this.taskItem.id = undefined;
-    this.taskItem.task_name = ''
-    this.taskItem.assigned_to = ''
-    this.taskItem.assigned_by = ''
-    this.taskItem.desc = ''
+    this.clearForm()
   }
 
   btnClear = () => {
     console.log("Clearing add task form....")
 
+    this.clearForm()
+  }
+
+  clearForm(): void {
     this.taskItem.id = undefined;
     this.taskItem.task_name = ''
     this.taskItem.assigned_to = ''
