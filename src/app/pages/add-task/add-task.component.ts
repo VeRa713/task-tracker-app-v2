@@ -9,4 +9,8 @@ export class AddTaskComponent {
   btnAddTask = () => {
     console.log("Adding task....");
   }
+
+  btnClear = () => {
+    console.log("Clearing add task form....");
+  }
 }
