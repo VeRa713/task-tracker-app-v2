@@ -15,15 +15,10 @@
   margin: 0 16px;
 }
 
-.toolbar #twitter-logo:hover,
-.toolbar #youtube-logo:hover {
-  opacity: 0.8;
-}
-
-.spacer {
-  flex: 1;
-}
-
 .logo {
   filter: invert(100%);
+}
+
+span{
+  margin-left: 15px;
 }
