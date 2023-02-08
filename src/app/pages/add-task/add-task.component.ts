@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-task.component.scss']
 })
 export class AddTaskComponent {
-
+  btnAddTask = () => {
+    console.log("Adding task....");
+  }
 }
