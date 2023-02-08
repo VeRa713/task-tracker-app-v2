@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LandingPageComponent } from './landing-page.component';
+import { TaskItemComponent } from './task-item.component';
 
-describe('LandingPageComponent', () => {
-  let component: LandingPageComponent;
-  let fixture: ComponentFixture<LandingPageComponent>;
+describe('TaskItemComponent', () => {
+  let component: TaskItemComponent;
+  let fixture: ComponentFixture<TaskItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LandingPageComponent ]
+      declarations: [ TaskItemComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LandingPageComponent);
+    fixture = TestBed.createComponent(TaskItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

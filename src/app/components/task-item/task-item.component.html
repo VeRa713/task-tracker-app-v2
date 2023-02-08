@@ -1,0 +1,23 @@
+<div class="mt-2 mb-2"></div>
+
+<div class="card">
+    <div class="card-body">
+      <div class="row">
+        <label>{{taskItem.task_name}}</label>
+        <br>
+        <label>Assigned To: Employee #{{taskItem.assigned_to}}</label>
+        <br>
+        <label>Assigned By: Employee #{{taskItem.assigned_by}}</label>
+        <br>
+        <label>Priority Level: {{taskItem.priority_id}}</label>
+        <br>
+        <label>Status: {{taskItem.status_id}}</label>
+
+        <label>Description:</label>
+
+        <div>
+          {{taskItem.desc}}
+        </div>
+      </div>
+    </div>
+  </div>

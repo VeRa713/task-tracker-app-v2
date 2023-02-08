@@ -17,6 +17,8 @@
                     id="taskName"
                     class="form-control"
                     placeholder="Task Name"
+                    autocomplete="off"
+                    [(ngModel)]="taskItem.task_name"
                     required />
             </div>
           </div>
@@ -28,6 +30,8 @@
                     id="assignTo"
                     class="form-control"
                     placeholder="Assign To"
+                    autocomplete="off"
+                    [(ngModel)]="taskItem.assigned_to"
                     required />
             </div>
           </div>
@@ -39,6 +43,8 @@
                     id="assignedBy"
                     class="form-control"
                     placeholder="Assigned By"
+                    autocomplete="off"
+                    [(ngModel)]="taskItem.assigned_by"
                     required />
             </div>
           </div>
@@ -46,21 +52,13 @@
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-prepend"></div>
-              <textarea name="desc" id="desc" class="form-control" placeholder="Description"></textarea>
+              <textarea name="desc" id="desc" class="form-control" placeholder="Description" [(ngModel)]="taskItem.desc"></textarea>
               <!-- <input type="text" name="desc"
                     id="desc"
                     class="form-control"
                     placeholder="Description"/> -->
             </div>
           </div>
-
-          <!-- <select class="form-control" id="selectPriority" (change)="handlerPriority($event)" >
-            <option value="0">-- SELECT PRIORITY --</option>
-            <option *ngFor="let priority of priorities" [value]="priority.id">
-                {{priority.priorityType}}
-            </option>
-          </select> -->
-
         </div>
 
         <div>
