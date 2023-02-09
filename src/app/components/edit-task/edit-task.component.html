@@ -1,3 +1,68 @@
 <h1>
   Edit Task#{{taskItem.id}} : {{taskItem.taskName}}
 </h1>
+
+<div class="card-body p-5 text-center">
+  <div class="mb-md-5 mt-md-5 pb-5">
+
+    <div class="card">
+      <div class="card-header text-white">
+        <b>Edit Task</b>
+      </div>
+
+      <div class="inputFields">
+        <div class="card-body">
+
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend"></div>
+              <input type="text" name="taskName"
+                    id="taskName"
+                    class="form-control"
+                    placeholder="Task Name"
+                    autocomplete="off"
+                    [(ngModel)]="taskItem.taskName"
+                    required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend"></div>
+              <input type="text" name="assignTo"
+                    id="assignTo"
+                    class="form-control"
+                    placeholder="Assign To"
+                    autocomplete="off"
+                    [(ngModel)]="taskItem.userId"
+                    required />
+            </div>
+          </div>
+
+          <!-- <select class="form-control" id="selectPriority" (change)="handlerPriority($event)">
+            <option value="0" disabled>-- SELECT PRIORITY --</option>
+            <option *ngFor="let priority of priorities" [value]="priority.id">
+                {{priority.priorityName}}
+            </option>
+           </select> -->
+
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-prepend"></div>
+              <textarea name="desc" id="desc" class="form-control" placeholder="Description" [(ngModel)]="taskItem.desc"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button class="btn btn-primary" (click)="btnSaveEdit()">Save Changes</button>
+          <!-- <button class="btn btn-primary" (click)="btnClear()">Clear</button> -->
+        </div>
+
+        <br>
+
+      </div>
+    </div>
+  </div>
+</div>
+

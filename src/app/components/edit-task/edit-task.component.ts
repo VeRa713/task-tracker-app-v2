@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 import { TaskService } from './../../services/task.service';
 import { TaskItem } from './../../models/task-item';
@@ -10,8 +10,10 @@ import { TaskItem } from './../../models/task-item';
 })
 export class EditTaskComponent implements OnInit{
   id: number
+  statusId : number
+  priorityId: number
 
-  taskItem: TaskItem = {
+  @Input() taskItem: TaskItem = {
     id: 0,
     taskName: "",
     userId: "",
@@ -22,7 +24,7 @@ export class EditTaskComponent implements OnInit{
 
   constructor(
     private route: ActivatedRoute,
-    private TaskService: TaskService
+    private taskService: TaskService
   ) {}
 
   ngOnInit(): void {
@@ -30,9 +32,25 @@ export class EditTaskComponent implements OnInit{
      this.id =  Number(this.route.snapshot.paramMap.get('id'))
      console.log(`EditComponent for id ${this.id}`)
 
-     this.TaskService.getById(this.id).subscribe((task) => {
+     this.taskService.getById(this.id).subscribe((task) => {
        this.taskItem =  task
      })
+  }
+
+  btnSaveEdit = () => {
+    console.log("Saving edit...")
+    console.log(this.taskItem)
+
+    let o = { ...this.taskItem }
+
+    //set to 1 for now
+    o.id = this.id
+    o.status = 1
+    o.priorityId = 1
+
+    this.taskService.saveTask(o).subscribe((savedTask) => {
+      console.log(savedTask)
+    })
   }
 
 }
