@@ -51,7 +51,7 @@ export class AddTaskComponent {
 
     //set to 1 for now
     o.status = 1
-    o.priorityId = 1;
+    o.priorityId = this.priorityId;
 
     this.taskService.saveTask(o).subscribe((savedTask) => {
       console.log(savedTask)
@@ -75,10 +75,8 @@ export class AddTaskComponent {
 
   handlerPriority = (payload: any) => {
     let priorityId = payload.target.value
-    this.prioritySelectedEvent.emit({ id: priorityId })
-  }
+    console.log(priorityId);
 
-  setPriorityId = (payload: any) => {
-    this.priorityId = Number(payload.id)
+    this.priorityId = priorityId;
   }
 }
