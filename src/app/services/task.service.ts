@@ -12,7 +12,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TaskService {
-  baseUrl: string = 'http://localhost:5152' //db url
+  baseUrl: string = 'http://localhost:5152' //db url: 5152 | mock-server:5000
 
   constructor(private http: HttpClient) { }
 

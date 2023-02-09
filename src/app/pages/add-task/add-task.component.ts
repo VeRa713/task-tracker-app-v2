@@ -11,8 +11,8 @@ import { Priority } from '../../models/priority';
 export class AddTaskComponent {
   constructor(private taskService : TaskService) {}
 
-  status_id : number
-  priority_id: number
+  statusId : number
+  priorityId: number
 
   @Input() taskItem: TaskItem = {
     id: 0,
@@ -49,12 +49,9 @@ export class AddTaskComponent {
 
     let o = { ...this.taskItem }
 
-    // o.status_id = this.status_id
-    // o.priority_id = this.priority_id
-
     //set to 1 for now
     o.status = 1
-    o.priorityId = 1
+    o.priorityId = 1;
 
     this.taskService.saveTask(o).subscribe((savedTask) => {
       console.log(savedTask)
@@ -77,7 +74,11 @@ export class AddTaskComponent {
   }
 
   handlerPriority = (payload: any) => {
-    let priority_id = payload.target.value
-    this.prioritySelectedEvent.emit({ id: priority_id })
+    let priorityId = payload.target.value
+    this.prioritySelectedEvent.emit({ id: priorityId })
+  }
+
+  setPriorityId = (payload: any) => {
+    this.priorityId = Number(payload.id)
   }
 }
