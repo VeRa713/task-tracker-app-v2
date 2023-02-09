@@ -37,7 +37,7 @@
           </div>
 
           <select class="form-control" id="selectPriority" (change)="handlerPriority($event)">
-            <option value="0">-- SELECT PRIORITY --</option>
+            <option value="0" disabled>-- SELECT PRIORITY --</option>
             <option *ngFor="let priority of priorities" [value]="priority.id">
                 {{priority.priorityName}}
             </option>
