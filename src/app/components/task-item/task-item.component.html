@@ -3,17 +3,17 @@
 <div class="card">
     <div class="card-body">
       <div class="row">
-        <label><b>{{taskItem.task_name}}</b></label>
+        <label><b>{{taskItem.taskName}}</b></label>
         <br>
-        <label>Assigned To: {{taskItem.user_id}}</label>
+        <label>Assigned To: {{taskItem.userId}}</label>
         <br>
-        <label>Priority Level: {{taskItem.priority_id}}</label>
+        <label>Priority Level: {{taskItem.priorityId}}</label>
         <br>
-        <label>Status: {{taskItem.status_id}}</label>
+        <label>Status: {{taskItem.status}}</label>
 
         <label>Description:</label>
 
-        <div>
+        <div class="taskDesc">
           {{taskItem.desc}}
         </div>
       </div>

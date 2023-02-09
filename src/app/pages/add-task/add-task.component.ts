@@ -15,11 +15,11 @@ export class AddTaskComponent {
 
   @Input() taskItem: TaskItem = {
     id: 0,
-    task_name: "",
-    user_id: "",
+    taskName: "",
+    userId: "",
     desc: "",
-    status_id: 0,
-    priority_id: 0
+    status: 0,
+    priorityId: 0
   }
 
   btnAddTask = () => {
@@ -31,9 +31,9 @@ export class AddTaskComponent {
     // o.status_id = this.status_id
     // o.priority_id = this.priority_id
 
-    //set to 0 for now
-    o.status_id = 0
-    o.priority_id = 0
+    //set to 1 for now
+    o.status = 1
+    o.priorityId = 1
 
     this.taskService.saveTask(o).subscribe((savedTask) => {
       console.log(savedTask)
@@ -50,8 +50,8 @@ export class AddTaskComponent {
 
   clearForm(): void {
     this.taskItem.id = undefined
-    this.taskItem.task_name = ''
-    this.taskItem.user_id = ""
+    this.taskItem.taskName = ''
+    this.taskItem.userId = ""
     this.taskItem.desc = ''
   }
 }
