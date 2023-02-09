@@ -16,6 +16,11 @@
         <div class="taskDesc">
           {{taskItem.desc}}
         </div>
+
+        <div>
+          <a routerLink="/edit-task/{{taskItem.id}}" class="btn btn-secondary w-3">Edit</a>
+          <a routerLink="/delete-task/{{taskItem.id}}" class="btn btn-danger w-3">Delete</a>
+        </div>
       </div>
     </div>
   </div>
