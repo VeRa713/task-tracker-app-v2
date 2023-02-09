@@ -14,12 +14,14 @@ import { AddTaskComponent } from './pages/add-task/add-task.component';
 import { UsersComponent } from './pages/users/users.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { UserItemComponent } from './components/user-item/user-item.component';
+import { EditTaskComponent } from './components/edit-task/edit-task.component';
 
 const appRoutes: Routes = [
   {path: 'add-task', component: AddTaskComponent},
   {path: 'view-tasks', component: TasksComponent},
   {path: 'add-user', component: AddUserComponent},
-  {path: 'view-users', component: UsersComponent}
+  {path: 'view-users', component: UsersComponent},
+  {path: 'edit-task/:id', component: EditTaskComponent}
 ]
 
 @NgModule({
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
     AddTaskComponent,
     UsersComponent,
     TaskItemComponent,
-    UserItemComponent
+    UserItemComponent,
+    EditTaskComponent
   ],
   imports: [
     BrowserModule,
