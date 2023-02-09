@@ -2,30 +2,11 @@
   "task_items": [
     {
       "id": 1,
-      "task_name": "new Task",
-      "assigned_to": "TM-1204",
-      "assigned_by": "TL-0613",
-      "desc": "new task description",
+      "task_name": "UI Task",
+      "user_id": "Me",
+      "desc": "Task from IU to mock-server",
       "status_id": 0,
       "priority_id": 0
-    },
-    {
-      "id": 2,
-      "task_name": "Create backend for add task",
-      "assigned_to": "Me",
-      "assigned_by": "Myself",
-      "desc": "AHAHAHHAHAHHAHAHAHAHHA",
-      "status_id": 0,
-      "priority_id": 0
-    },
-    {
-      "task_name": "Test if clear function works",
-      "assigned_to": "Me",
-      "assigned_by": "Myself",
-      "desc": "hihi",
-      "status_id": 0,
-      "priority_id": 0,
-      "id": 3
     }
   ],
   "priority": [

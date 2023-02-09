@@ -16,8 +16,7 @@ export class AddTaskComponent {
   @Input() taskItem: TaskItem = {
     id: 0,
     task_name: "",
-    assigned_to: "",
-    assigned_by: "",
+    user_id: "",
     desc: "",
     status_id: 0,
     priority_id: 0
@@ -50,10 +49,9 @@ export class AddTaskComponent {
   }
 
   clearForm(): void {
-    this.taskItem.id = undefined;
+    this.taskItem.id = undefined
     this.taskItem.task_name = ''
-    this.taskItem.assigned_to = ''
-    this.taskItem.assigned_by = ''
+    this.taskItem.user_id = ""
     this.taskItem.desc = ''
   }
 }

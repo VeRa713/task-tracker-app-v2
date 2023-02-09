@@ -17,9 +17,12 @@ export class TasksComponent implements OnInit{
   // called when component is initialized
   // async
   ngOnInit() : void {
-    console.log("ngOnInit() fired for App.Component")
+    console.log("ngOnInit() fired for Tasks.Component")
 
     this.taskService.getAllTasks().subscribe((taskItems) => {
+      console.log("TaskComponent")
+      console.log(typeof taskItems) //object (should be an array)
+      console.log(taskItems)
       this.taskItems = taskItems
     })
   }

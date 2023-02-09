@@ -12,7 +12,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TaskService {
-  baseUrl: string = 'http://localhost:5000' //db url
+  baseUrl: string = 'http://localhost:5152' //db url
 
   constructor(private http: HttpClient) { }
 
@@ -20,6 +20,8 @@ export class TaskService {
     let tasks: Observable<TaskItem[]>
 
     tasks = this.http.get<TaskItem[]>(`${this.baseUrl}/task_items`, httpOptions)
+    console.log("TaskService")
+    console.log(tasks)
 
     return tasks
   }
