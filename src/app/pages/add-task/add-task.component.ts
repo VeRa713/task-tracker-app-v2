@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { TaskItem } from '../../models/task-item';
 import { TaskService} from '../../services/task.service';
+import { Priority } from '../../models/priority';
 
 @Component({
   selector: 'app-add-task',
@@ -21,6 +22,26 @@ export class AddTaskComponent {
     status: 0,
     priorityId: 0
   }
+
+  @Input() priority: Priority
+
+  // will change this - get values from db
+  priorities : Priority[] = [
+    {
+      id: 1,
+      priorityName: "Low"
+    },
+    {
+      id: 2,
+      priorityName: "Medium"
+    },
+    {
+      id: 3,
+      priorityName: "High"
+    }
+  ]
+
+  @Output() prioritySelectedEvent : EventEmitter<any> = new EventEmitter<any>()
 
   btnAddTask = () => {
     console.log("Adding task....")
@@ -53,5 +74,10 @@ export class AddTaskComponent {
     this.taskItem.taskName = ''
     this.taskItem.userId = ""
     this.taskItem.desc = ''
+  }
+
+  handlerPriority = (payload: any) => {
+    let priority_id = payload.target.value
+    this.prioritySelectedEvent.emit({ id: priority_id })
   }
 }

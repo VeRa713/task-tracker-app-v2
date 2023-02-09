@@ -36,14 +36,17 @@
             </div>
           </div>
 
+          <select class="form-control" id="selectPriority" (change)="handlerPriority($event)" >
+            <option value="0">-- SELECT PRIORITY --</option>
+            <option *ngFor="let priority of priorities" [value]="priority.id">
+                {{priority.priorityName}}
+            </option>
+           </select>
+
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-prepend"></div>
               <textarea name="desc" id="desc" class="form-control" placeholder="Description" [(ngModel)]="taskItem.desc"></textarea>
-              <!-- <input type="text" name="desc"
-                    id="desc"
-                    class="form-control"
-                    placeholder="Description"/> -->
             </div>
           </div>
         </div>
