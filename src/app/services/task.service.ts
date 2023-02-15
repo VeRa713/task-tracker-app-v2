@@ -35,18 +35,6 @@ export class TaskService {
   }
 
   saveTask = (taskItem : TaskItem) : Observable<TaskItem> => {
-    let task : Observable<TaskItem>
-
-    if(taskItem.id){
-      // Perform Update: PUT /tasks_items/:id
-      const url = `${this.baseUrl}/task_items/${taskItem.id}`
-
-      task = this.http.put<TaskItem>(url, taskItem, httpOptions)
-    } else {
-      // Perform Create: POST /tasks_items
-      task = this.http.post<TaskItem>(`${this.baseUrl}/task_items`, taskItem, httpOptions)
-    }
-
-    return task
+    return this.http.post<TaskItem>(`${this.baseUrl}/task_items`, taskItem, httpOptions)
   }
 }

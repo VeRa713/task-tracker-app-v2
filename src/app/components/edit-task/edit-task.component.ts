@@ -45,10 +45,13 @@ export class EditTaskComponent implements OnInit{
 
     //set to 1 for now
     o.id = this.id
+    console.log("this id: " + this.id)
+    console.log("o.id: " + o.id)
     o.status = 1
     o.priorityId = 1
 
     this.taskService.saveTask(o).subscribe((savedTask) => {
+      console.log(o)
       console.log(savedTask)
     })
   }
