@@ -37,4 +37,13 @@ export class TaskService {
   saveTask = (taskItem : TaskItem) : Observable<TaskItem> => {
     return this.http.post<TaskItem>(`${this.baseUrl}/task_items`, taskItem, httpOptions)
   }
+
+  deleteTask = (taskItem: TaskItem) : Observable<TaskItem> => {
+    let task : Observable<TaskItem>
+    console.log("Deleting task #:" + taskItem.id)
+
+    task = this.http.delete<TaskItem>(`${this.baseUrl}/task_items/delete_task/${taskItem.id}`, httpOptions)
+
+    return task
+  }
 }

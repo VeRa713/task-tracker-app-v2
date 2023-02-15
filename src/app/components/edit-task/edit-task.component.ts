@@ -55,5 +55,4 @@ export class EditTaskComponent implements OnInit{
       console.log(savedTask)
     })
   }
-
 }

@@ -1,5 +1,6 @@
 import { TaskItem } from './../../models/task-item';
 import { Component, Input } from '@angular/core';
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-task-item',
@@ -9,17 +10,16 @@ import { Component, Input } from '@angular/core';
 export class TaskItemComponent {
   @Input() taskItem: TaskItem
 
-  // constructor(private taskService: TaskServiceService) { }
+  constructor(private taskService: TaskService) { }
 
-  handleEdit(task_name: String): void {
-    console.log("Edit button clicked...")
+  handleDelete(taskItem: TaskItem): void {
+    console.log("Delete button for " + taskItem.id +" clicked...")
 
-    // this.taskService.editTask(task_name)
-  }
+    let o = { ...taskItem }
+    o.id = taskItem.id
 
-  handleDelete(task_name: String): void {
-    console.log("Delete button clicked...")
-
-    // this.taskService.deleteTask(task_name)
+    this.taskService.deleteTask(o).subscribe((deleteTask) => {
+      console.log("Deleted Task #" + taskItem.id)
+    });
   }
 }
