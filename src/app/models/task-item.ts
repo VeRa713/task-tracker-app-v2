@@ -1,16 +1,13 @@
+import { Priority } from "./priority"
+import { User } from "./user"
+
 export interface TaskItem{
     id?: number
     taskName: string
     userId: string
+    user?: User
     desc?: string
     status: number
     priorityId: number
-    user?: User
-}
-
-export interface User{
-    id: number
-    email: string
-    firstName: string
-    lastName: string
+    priority?: Priority
 }
