@@ -71,6 +71,7 @@ export class AddTaskComponent {
     this.taskItem.taskName = ''
     this.taskItem.userId = ""
     this.taskItem.desc = ''
+    this.taskItem.priorityId = 0
   }
 
   handlerPriority = (payload: any) => {
