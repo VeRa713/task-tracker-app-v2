@@ -20,6 +20,7 @@ export class TaskItemComponent {
 
     this.taskService.deleteTask(o).subscribe((deleteTask) => {
       console.log("Deleted Task #" + taskItem.id)
+      window.location.reload();
     });
   }
 }
