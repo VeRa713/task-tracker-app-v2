@@ -49,7 +49,7 @@ export class AddTaskComponent {
 
     let o = { ...this.taskItem }
 
-    //set to 1 for now
+    //set to 1 - default status is "To do"
     o.status = 1
     o.priorityId = this.priorityId;
 
