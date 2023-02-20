@@ -19,7 +19,7 @@ export class AddTaskComponent {
     taskName: "",
     userId: "",
     desc: "",
-    status: 0,
+    statusId: 0,
     priorityId: 0
   }
 
@@ -49,9 +49,12 @@ export class AddTaskComponent {
 
     let o = { ...this.taskItem }
 
-    //set to 1 - default status is "To do"
-    o.status = 1
+    //set to 1 - default status is "to do"
+    o.statusId = 1
     o.priorityId = this.priorityId;
+
+    console.log("status: " + o.statusId)
+    console.log(o)
 
     this.taskService.saveTask(o).subscribe((savedTask) => {
       console.log(savedTask)

@@ -1,5 +1,6 @@
 import { Priority } from "./priority"
 import { User } from "./user"
+import { Status } from "./status"
 
 export interface TaskItem{
     id?: number
@@ -7,7 +8,8 @@ export interface TaskItem{
     userId: string
     user?: User
     desc?: string
-    status: number
+    statusId: number
+    status?: Status
     priorityId: number
     priority?: Priority
 }
