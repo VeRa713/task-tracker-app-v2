@@ -22,7 +22,7 @@
                     required />
             </div>
           </div>
-
+<!--
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-prepend"></div>
@@ -34,7 +34,14 @@
                     [(ngModel)]="taskItem.userId"
                     required />
             </div>
-          </div>
+          </div> -->
+
+          <select class="form-control" id="selectUser" (change)="handlerUser($event)" [(ngModel)]="taskItem.userId">
+            <option value="" disabled>-- ASSIGN TO --</option>
+            <option *ngFor="let user of users" [value]="user.id">
+                {{user.firstName}} {{user.lastName}}
+            </option>
+           </select>
 
           <select class="form-control" id="selectPriority" (change)="handlerPriority($event)" [(ngModel)]="taskItem.priorityId">
             <option value="0" disabled>-- SELECT PRIORITY --</option>
