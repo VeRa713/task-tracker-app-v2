@@ -15,8 +15,10 @@ import { UsersComponent } from './pages/users/users.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { UserItemComponent } from './components/user-item/user-item.component';
 import { EditTaskComponent } from './components/edit-task/edit-task.component';
+import { LandingComponent } from './pages/landing/landing.component';
 
 const appRoutes: Routes = [
+  {path: '', component: LandingComponent},
   {path: 'add-task', component: AddTaskComponent},
   {path: 'view-tasks', component: TasksComponent},
   {path: 'add-user', component: AddUserComponent},
@@ -36,7 +38,8 @@ const appRoutes: Routes = [
     UsersComponent,
     TaskItemComponent,
     UserItemComponent,
-    EditTaskComponent
+    EditTaskComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
