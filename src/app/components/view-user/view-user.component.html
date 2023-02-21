@@ -1,3 +1,30 @@
 <h1>
-  User #{{user.id}} | {{user.firstName}} {{user.lastName}}
+  #{{user.id}} | {{user.firstName}} {{user.lastName}}
 </h1>
+
+<div class="card">
+  <div class="card-header">
+    <b>User Details</b>
+  </div>
+
+  <div class="card-body">
+    <b>Email:</b> {{user.email}}
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">
+    <b>Tasks</b>
+  </div>
+
+  <div class="card-body">
+    <div>
+      Sort by:
+      <button>Priority</button>
+      <button>Status</button>
+    </div>
+
+    <app-task-item *ngFor="let taskItem of taskItems" [taskItem]="taskItem">
+    </app-task-item>
+  </div>
+</div>

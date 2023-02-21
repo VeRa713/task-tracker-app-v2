@@ -34,6 +34,14 @@ export class TaskService {
     return task
   }
 
+  getTasksByUser = (id: number) : Observable<TaskItem[]> => {
+    let tasks: Observable<TaskItem[]>
+
+    tasks = this.http.get<TaskItem[]>(`${this.baseUrl}/task_items/user/${id}`, httpOptions)
+
+    return tasks
+  }
+
   saveTask = (taskItem : TaskItem) : Observable<TaskItem> => {
     return this.http.post<TaskItem>(`${this.baseUrl}/task_items`, taskItem, httpOptions)
   }
