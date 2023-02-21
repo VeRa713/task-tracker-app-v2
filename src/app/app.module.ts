@@ -16,6 +16,7 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { UserItemComponent } from './components/user-item/user-item.component';
 import { EditTaskComponent } from './components/edit-task/edit-task.component';
 import { LandingComponent } from './pages/landing/landing.component';
+import { ViewUserComponent } from './components/view-user/view-user.component';
 
 const appRoutes: Routes = [
   {path: '', component: LandingComponent},
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
   {path: 'view-tasks', component: TasksComponent},
   {path: 'add-user', component: AddUserComponent},
   {path: 'view-users', component: UsersComponent},
-  {path: 'edit-task/:id', component: EditTaskComponent}
+  {path: 'edit-task/:id', component: EditTaskComponent},
+  {path: 'view-user/:id', component: ViewUserComponent}
 ]
 
 @NgModule({
@@ -39,7 +41,8 @@ const appRoutes: Routes = [
     TaskItemComponent,
     UserItemComponent,
     EditTaskComponent,
-    LandingComponent
+    LandingComponent,
+    ViewUserComponent
   ],
   imports: [
     BrowserModule,
