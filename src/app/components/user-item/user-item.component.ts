@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
+import { User } from '../../models/user';
+import { UserService } from './../../services/user.service';
 
 @Component({
   selector: 'app-user-item',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-item.component.scss']
 })
 export class UserItemComponent {
+  @Input() user: User
 
+  constructor(private userService: UserService) { }
 }

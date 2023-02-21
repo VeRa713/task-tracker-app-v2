@@ -8,7 +8,7 @@ import { TaskService } from '../../services/task.service';
   styleUrls: ['./tasks.component.scss']
 })
 export class TasksComponent implements OnInit{
-  taskItems: TaskItem[] = [];
+  taskItems: TaskItem[] = []
 
   constructor(
     private taskService: TaskService
