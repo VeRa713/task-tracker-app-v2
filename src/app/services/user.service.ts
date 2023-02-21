@@ -30,4 +30,10 @@ export class UserService {
   saveUser = (user : User) : Observable<User> => {
     return this.http.post<User>(`${this.baseUrl}/users`, user, httpOptions)
   }
+
+  deleteUser = (user: User) : Observable<User> => {
+    console.log("Deleting task #:" + user.id)
+
+    return this.http.delete<User>(`${this.baseUrl}/users/delete_user/${user.id}`, httpOptions)
+  }
 }
