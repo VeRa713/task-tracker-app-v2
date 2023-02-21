@@ -26,4 +26,8 @@ export class UserService {
 
     return users
   }
+
+  saveUser = (user : User) : Observable<User> => {
+    return this.http.post<User>(`${this.baseUrl}/users`, user, httpOptions)
+  }
 }

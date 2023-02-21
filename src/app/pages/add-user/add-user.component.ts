@@ -20,6 +20,13 @@ export class AddUserComponent{
 
   btnAddUser = () => {
     console.log("Adding user....")
+
+    let o = { ...this.user }
+
+    this.userService.saveUser(o).subscribe((user) => {
+      console.log(user)
+    })
+
     this.clearForm()
   }
 
