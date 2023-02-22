@@ -21,7 +21,7 @@ export class PieChartComponent implements OnInit{
       data: {// values on X-Axis
         labels: ['To do', 'In Progress','Done'],
 	       datasets: [{
-    label: 'My First Dataset',
+    label: 'Task Count',
     data: [50, 25, 25],
     backgroundColor: [
       '#C5CAED',
@@ -34,7 +34,6 @@ export class PieChartComponent implements OnInit{
       options: {
         aspectRatio:1.5
       }
-
     });
   }
 }
