@@ -28,18 +28,28 @@
           </div>
 
           <label><b>Assigned To</b></label>
-          <div class="form-group">
-            <div class="input-group">
-              <div class="input-group-prepend"></div>
-              <input type="text" name="assignTo"
-                    id="assignTo"
-                    class="form-control"
-                    placeholder="Assign To"
-                    autocomplete="off"
-                    [(ngModel)]="taskItem.userId"
-                    required />
-            </div>
-          </div>
+          <select class="form-control" id="selectUser" (change)="handlerUser($event)" [(ngModel)]="taskItem.userId">
+            <option value="" disabled>-- ASSIGN TO --</option>
+            <option *ngFor="let user of users" [value]="user.id">
+                {{user.firstName}} {{user.lastName}}
+            </option>
+          </select>
+
+          <label><b>Priority</b></label>
+          <select class="form-control" id="selectPriority" (change)="handlerPriority($event)" [(ngModel)]="taskItem.priorityId">
+            <option value="0" disabled>-- SELECT PRIORITY --</option>
+            <option *ngFor="let priority of priorities" [value]="priority.id">
+                {{priority.priorityName}}
+            </option>
+          </select>
+
+          <label><b>Status</b></label>
+          <select class="form-control" id="selectStatus" (change)="handlerStatus($event)" [(ngModel)]="taskItem.statusId">
+            <option value="0" disabled>-- SELECT STATUS --</option>
+            <option *ngFor="let status of statuses" [value]="status.id">
+                {{status.statusName}}
+            </option>
+          </select>
 
           <label><b>Description</b></label>
           <div class="form-group">
