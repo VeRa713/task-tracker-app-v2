@@ -13,6 +13,8 @@ export class PieChartComponent implements OnInit {
 
   public chart: any;
 
+  taskData: number[] = [50, 25, 25]
+
   createChart = () => {
     this.chart = new Chart('MyChart', {
       type: 'pie', //this denotes tha type of chart
@@ -23,7 +25,7 @@ export class PieChartComponent implements OnInit {
         datasets: [
           {
             label: 'Task Count',
-            data: [50, 25, 25],
+            data: this.taskData,
             backgroundColor: ['#C5CAED', '#C796DB', '#9F63D0'],
             hoverOffset: 4,
           },
