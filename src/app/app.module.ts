@@ -18,6 +18,7 @@ import { EditTaskComponent } from './components/edit-task/edit-task.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { ViewUserComponent } from './components/view-user/view-user.component';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+import { TopUsersComponent } from './components/top-users/top-users.component';
 
 const appRoutes: Routes = [
   {path: '', component: LandingComponent},
@@ -44,7 +45,8 @@ const appRoutes: Routes = [
     EditTaskComponent,
     LandingComponent,
     ViewUserComponent,
-    PieChartComponent
+    PieChartComponent,
+    TopUsersComponent
   ],
   imports: [
     BrowserModule,

@@ -45,7 +45,7 @@ export class PieChartComponent implements OnInit {
         ],
       },
       options: {
-        aspectRatio: 1.5,
+        aspectRatio: .59,
       },
     });
   };
