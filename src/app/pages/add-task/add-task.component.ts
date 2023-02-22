@@ -24,7 +24,6 @@ export class AddTaskComponent implements OnInit{
     this.userService.getAllUsers().subscribe((users) => {
 
       console.log("TYPE "+ typeof users)
-      console.log(typeof this.priorities)
 
       this.users = users
       console.log(this.users)
@@ -44,24 +43,11 @@ export class AddTaskComponent implements OnInit{
     priorityId: 0
   }
 
-  @Input() priority: Priority
-
-  priorities : Priority[] = [
-    {
-      id: 1,
-      priorityName: "Low"
-    },
-    {
-      id: 2,
-      priorityName: "Medium"
-    },
-    {
-      id: 3,
-      priorityName: "High"
-    }
-  ]
-
   @Output() prioritySelectedEvent : EventEmitter<any> = new EventEmitter<any>()
+
+  setPriorityId = (payload: any) => {
+    this.priorityId = Number(payload.id)
+  }
 
   btnAddTask = () => {
     console.log("Adding task....")
@@ -71,6 +57,7 @@ export class AddTaskComponent implements OnInit{
 
     //set to 1 - default status is "to do"
     o.statusId = 1
+    o.priorityId = this.priorityId
 
     console.log("Default Status: " + o.statusId)
     console.log(o)
@@ -94,13 +81,6 @@ export class AddTaskComponent implements OnInit{
     this.taskItem.userId = ""
     this.taskItem.desc = ''
     this.taskItem.priorityId = 0
-  }
-
-  handlerPriority = (payload: any) => {
-    let priorityId = payload.target.value
-
-    this.priorityId = priorityId;
-    console.log("Set priority to: " + this.priorityId)
   }
 
   handlerUser = (payload: any) => {

@@ -17,6 +17,7 @@ import { UserItemComponent } from './components/user-item/user-item.component';
 import { EditTaskComponent } from './components/edit-task/edit-task.component';
 import { LandingComponent } from './pages/landing/landing.component';
 import { ViewUserComponent } from './components/view-user/view-user.component';
+import { PrioritySelectComponent } from './components/priority-select/priority-select.component';
 
 const appRoutes: Routes = [
   {path: '', component: LandingComponent},
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     UserItemComponent,
     EditTaskComponent,
     LandingComponent,
-    ViewUserComponent
+    ViewUserComponent,
+    PrioritySelectComponent
   ],
   imports: [
     BrowserModule,
