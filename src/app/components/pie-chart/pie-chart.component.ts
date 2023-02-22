@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
+import { TaskService } from '../../services/task.service';
 
 @Component({
   selector: 'app-pie-chart',
@@ -7,15 +8,27 @@ import { Chart } from 'chart.js/auto';
   styleUrls: ['./pie-chart.component.scss'],
 })
 export class PieChartComponent implements OnInit {
+  public chart: any
+
+  taskCount: number[] = []
+
+  constructor(
+    private taskService: TaskService
+  ) { }
+
   ngOnInit(): void {
-    this.createChart();
+    this.taskService.countTaskByStatus().subscribe((tc) => {
+      this.createChart(tc)
+    })
   }
 
-  public chart: any;
+  createChart = (tc: number[]) => {
+    console.log(tc)
 
-  taskData: number[] = [50, 25, 25]
+    tc.forEach(element => {
+      this.taskCount.push(element)
+    });
 
-  createChart = () => {
     this.chart = new Chart('MyChart', {
       type: 'pie', //this denotes tha type of chart
 
@@ -25,7 +38,7 @@ export class PieChartComponent implements OnInit {
         datasets: [
           {
             label: 'Task Count',
-            data: this.taskData,
+            data: this.taskCount,
             backgroundColor: ['#C5CAED', '#C796DB', '#9F63D0'],
             hoverOffset: 4,
           },

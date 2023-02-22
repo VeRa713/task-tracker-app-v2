@@ -54,4 +54,7 @@ export class TaskService {
 
     return task
   }
+  countTaskByStatus = () : Observable<number[]> => {
+    return this.http.get<number[]>(`${this.baseUrl}/task_items/count_task`, httpOptions)
+  }
 }
